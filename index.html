@@ -5,7 +5,7 @@
 	<title>Mensaje por clase</title>
 </head>
 <body>
-	
+
 	<h1 class="titulo">Esto es un título</h1>
 	<p class="mensaje">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, perspiciatis commodi excepturi numquam delectus natus aspernatur alias, at consequatur perferendis dignissimos omnis. <a href="#">Soy un enlace</a></p>
 	<img src="http://lorempixel.com/output/nature-q-c-301-301-3.jpg" alt="" class="mensaje">
@@ -15,9 +15,20 @@
 
 
 	<script>
-		if((document.getElementsByClassName("class") < 4)) {
-		document.write("son muchos")};//Escribe aquí tu código Javascript
+		function mensaje(){
+			var msje = document.getElementsByClassName('mensaje');
+			if(msje.length == 1){
+				alert("Es muy poco");
+			}
+			else if(msje.length > 2 && msje.length < 4){
+				alert("No está mal");
+			} else{
+				alert("Son muchos!");
+			}
+		};
+		mensaje();
 	</script>
-	 <script type='text/javascript' src='js/main.js'></script>
+ <script type='text/javascript' src='js/main.js'></script>
+
 </body>
 </html>
